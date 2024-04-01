@@ -1,6 +1,5 @@
 const mobileSidebar = document.getElementById('mobileSidebar');
-const closeButton = document.getElementById('closeBtn');
-const hamburgerBtn = document.getElementById('hamburgerBtn');
+
 
 function convertKelvinToCelsius(kelvin) {
   return Math.round(kelvin - 273.15);
@@ -81,7 +80,7 @@ function showWeather(country) {
     .catch((error) => console.error('Error fetching weather data:', error));
 }
 
-function searchCountry() {
+function searchCountry(){
   const countryInput = document.getElementById('Search').value;
   fetch(`https://restcountries.com/v3.1/name/${countryInput}`)
     .then((response) => response.json())
